@@ -32,6 +32,10 @@ interface SecundariaContract {
     Item getItemSingular(int id);
 
     int getPosition(int id);
+
+    void moveLeft(int id);
+
+    void moveRight(int id);
   }
 
   interface Router {

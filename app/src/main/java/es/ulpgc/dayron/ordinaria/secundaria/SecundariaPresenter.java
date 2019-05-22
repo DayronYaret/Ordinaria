@@ -55,12 +55,14 @@ public class SecundariaPresenter implements SecundariaContract.Presenter {
 
   @Override
   public void moveLeft() {
-
+  model.moveLeft(viewModel.item.getId());
+  fetchData();
   }
 
   @Override
   public void moveRight() {
-
+  model.moveRight(viewModel.item.getId());
+  fetchData();
   }
 
 

@@ -33,4 +33,14 @@ public class SecundariaModel implements SecundariaContract.Model {
   public int getPosition(int id) {
     return repository.getPosition(id);
   }
+
+  @Override
+  public void moveLeft(int id) {
+  repository.moveLeft(id);
+  }
+
+  @Override
+  public void moveRight(int id) {
+  repository.moveRight(id);
+  }
 }

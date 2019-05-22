@@ -10,4 +10,8 @@ public interface RepositoryContract {
     Item getItemSingular(int id);
 
     int getPosition(int id);
+
+    void moveLeft(int id);
+
+    void moveRight(int id);
 }

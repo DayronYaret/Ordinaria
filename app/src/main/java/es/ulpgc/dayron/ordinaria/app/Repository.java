@@ -48,6 +48,29 @@ public class Repository implements RepositoryContract {
   }
 
   @Override
+  public void moveLeft(int id) {
+    for(int i=0; i<items.size(); i++){
+      if(items.get(i).getId()==id){
+        if(i==0){
+          return;
+        }
+        items.add(i-1,items.get(i));
+        items.remove(i+1);
+      }
+    }
+  }
+
+  @Override
+  public void moveRight(int id) {
+    for(int i=0; i<items.size(); i++){
+      if(items.get(i).getId()==id){
+        items.add(i+2,items.get(i));
+        items.remove(i);
+      }
+    }
+  }
+
+  @Override
   public List<Item> getItem() {
     return items;
   }
