@@ -7,6 +7,7 @@ import java.lang.ref.WeakReference;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentActivity;
 
+import es.ulpgc.dayron.ordinaria.app.Item;
 import es.ulpgc.dayron.ordinaria.app.RepositoryContract;
 
 public class SecundariaModel implements SecundariaContract.Model {
@@ -21,5 +22,15 @@ public class SecundariaModel implements SecundariaContract.Model {
   public String fetchData() {
     // Log.e(TAG, "fetchData()");
     return "Hello";
+  }
+
+  @Override
+  public Item getItemSingular(int id) {
+    return repository.getItemSingular(id);
+  }
+
+  @Override
+  public int getPosition(int id) {
+    return repository.getPosition(id);
   }
 }

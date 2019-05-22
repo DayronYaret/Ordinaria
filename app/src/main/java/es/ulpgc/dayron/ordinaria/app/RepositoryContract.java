@@ -6,4 +6,8 @@ public interface RepositoryContract {
     List<Item> getItem();
 
     void add();
+
+    Item getItemSingular(int id);
+
+    int getPosition(int id);
 }

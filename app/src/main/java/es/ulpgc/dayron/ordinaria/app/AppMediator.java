@@ -35,4 +35,8 @@ public class AppMediator extends Application {
     public void setItem(Item item) {
     this.item = item;
     }
+
+  public Item getItem() {
+    return item;
+  }
 }

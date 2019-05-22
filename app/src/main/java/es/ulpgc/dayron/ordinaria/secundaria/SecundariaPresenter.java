@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.dayron.ordinaria.app.Item;
+
 public class SecundariaPresenter implements SecundariaContract.Presenter {
 
   public static String TAG = SecundariaPresenter.class.getSimpleName();
@@ -36,22 +38,28 @@ public class SecundariaPresenter implements SecundariaContract.Presenter {
   public void fetchData() {
     // Log.e(TAG, "fetchData()");
 
-    // set passed state
-    SecundariaState state = router.getDataFromPreviousScreen();
-    if (state != null) {
-      viewModel.data = state.data;
-    }
-
-    if (viewModel.data == null) {
+    Item item = router.getDataFromPreviousScreen();
+    if (viewModel.item == null) {
       // call the model
-      String data = model.fetchData();
+      viewModel.item=item;
 
       // set initial state
-      viewModel.data = data;
     }
 
     // update the view
+    viewModel.item= model.getItemSingular(item.getId());
+    viewModel.position=model.getPosition(item.getId());
     view.get().displayData(viewModel);
+
+  }
+
+  @Override
+  public void moveLeft() {
+
+  }
+
+  @Override
+  public void moveRight() {
 
   }
 

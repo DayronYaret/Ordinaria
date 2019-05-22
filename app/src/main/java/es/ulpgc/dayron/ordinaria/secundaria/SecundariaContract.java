@@ -2,6 +2,8 @@ package es.ulpgc.dayron.ordinaria.secundaria;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.dayron.ordinaria.app.Item;
+
 interface SecundariaContract {
 
   interface View {
@@ -18,10 +20,18 @@ interface SecundariaContract {
     void injectRouter(Router router);
 
     void fetchData();
+
+    void moveLeft();
+
+    void moveRight();
   }
 
   interface Model {
     String fetchData();
+
+    Item getItemSingular(int id);
+
+    int getPosition(int id);
   }
 
   interface Router {
@@ -29,6 +39,6 @@ interface SecundariaContract {
 
     void passDataToNextScreen(SecundariaState state);
 
-    SecundariaState getDataFromPreviousScreen();
+    Item getDataFromPreviousScreen();
   }
 }

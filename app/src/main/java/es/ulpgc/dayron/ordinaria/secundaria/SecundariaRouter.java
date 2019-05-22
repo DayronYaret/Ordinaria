@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import es.ulpgc.dayron.ordinaria.app.AppMediator;
+import es.ulpgc.dayron.ordinaria.app.Item;
 
 public class SecundariaRouter implements SecundariaContract.Router {
 
@@ -29,8 +30,8 @@ public class SecundariaRouter implements SecundariaContract.Router {
   }
 
   @Override
-  public SecundariaState getDataFromPreviousScreen() {
-    SecundariaState state = mediator.getSecundariaState();
-    return state;
+  public Item getDataFromPreviousScreen() {
+    Item item = mediator.getItem();
+    return item;
   }
 }
