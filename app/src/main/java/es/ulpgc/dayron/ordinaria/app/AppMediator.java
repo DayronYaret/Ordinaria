@@ -9,6 +9,7 @@ import es.ulpgc.dayron.ordinaria.secundaria.SecundariaState;
 public class AppMediator extends Application {
   private PrincipalState principalState;
   private SecundariaState secundariaState;
+  private Item item;
 
   public AppMediator(){
     principalState= new PrincipalState();
@@ -31,4 +32,7 @@ public class AppMediator extends Application {
     this.secundariaState = secundarioState;
   }
 
+    public void setItem(Item item) {
+    this.item = item;
+    }
 }

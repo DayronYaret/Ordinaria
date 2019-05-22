@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".secundaria.SecundariaActivity">
+    android:orientation="vertical">
+
 
     <TextView
-        android:id="@+id/data"
+        android:id="@+id/idTittleTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:text="Hello" />
+        android:text="@string/id_tittle_text_label"
+        android:textSize="40dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/idTextView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:text="@string/item_id_label" />
+
+    <TextView
+        android:id="@+id/positionTittleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="@string/position_text_label"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/positiontextView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:text="@string/position_label" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left_button_label" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right_button_label" />
+
+</LinearLayout>

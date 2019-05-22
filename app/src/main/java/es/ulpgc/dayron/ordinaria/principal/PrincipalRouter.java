@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import es.ulpgc.dayron.ordinaria.app.AppMediator;
+import es.ulpgc.dayron.ordinaria.app.Item;
 import es.ulpgc.dayron.ordinaria.secundaria.SecundariaActivity;
 
 public class PrincipalRouter implements PrincipalContract.Router {
@@ -25,8 +26,8 @@ public class PrincipalRouter implements PrincipalContract.Router {
   }
 
   @Override
-  public void passDataToNextScreen(PrincipalState state) {
-    mediator.setPrincipalState(state);
+  public void passDataToNextScreen(Item item) {
+    mediator.setItem(item);
   }
 
   @Override

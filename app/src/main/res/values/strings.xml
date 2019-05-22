@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Ordinaria</string>
+    <string name="left_button_label"><![CDATA[<-]]></string>
+    <string name="right_button_label"><![CDATA[->]]></string>
+    <string name="id_tittle_text_label">Item</string>
+    <string name="item_id_label">Item Id</string>
+    <string name="position_text_label">Position</string>
+    <string name="position_label">Position Item</string>
 </resources>
